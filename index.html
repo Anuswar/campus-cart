@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Campus Cart</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    <!--==================== STYLE SHEETS ====================-->
+    <link rel="stylesheet" href="assets/css/library/Roboto/roboto.css" />
+    <link rel="stylesheet" href="assets/css/library/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/library/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--==================== JAVASCRIPT ====================-->
+    <script defer src="js/library/infinite-scroll/infinite-scroll.pkgd.min.js"></script>
+    <script defer src="js/library/fuse/fuse.min.js"></script>
+    <script defer src="js/library/store/store.everything.min.js"></script>
+    <script defer src="js/library/lscache/lscache.min.js"></script>
+    <script defer src="js/library/jquery/jquery-3.6.0.min.js"></script>
+    <script defer src="js/products.js"></script>
+</head>
+<body>
+    
+    <!--==================== HEADER ====================-->
+    <header class="bg-dark text-light" id="main-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Campus Cart Logo -->
+                <a href="index.html" class="col-6 col-md-3 text-start">
+                    <img src="assets/images/campus-cart-logo-w.png" alt="Campus Cart Logo" class="logo-image campus-cart-logo" />
+                </a>
+    
+                <!-- College Logo -->
+                <div class="col-6 col-md-3 text-end logo-1">
+                    <img src="assets/images/college-logo.png" alt="College Logo" class="logo-image college-logo-1" />
+                </div>
+    
+                <!-- Search Bar -->
+                <div class="col-12 col-md-6 mt-md-0" style="margin-top: 0.5rem !important;">
+                    <div class="input-group search-bar">
+                      <input type="text" class="form-control" id="search" name="search" placeholder="Search for products..." />
+                      <button class="btn search-btn" id="search-btn" type="button" title="Search">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>  
+                </div>                                                      
+    
+                <!-- College Logo -->
+                <div class="col-6 col-md-3 text-end logo-2">
+                    <img src="assets/images/college-logo.png" alt="College Logo" class="logo-image college-logo-2" />
+                </div>
+            </div>
+        </div>
+    </header>    
+          
+    <!--==================== MAIN ====================-->
+    <main class="container-fluid mt-3">
+      
+        <!--==================== PRODUCT LIST ====================-->
+        <section id="product-list" class="row g-3 infinite-scroll">
+            <!-- product card -->
+
+        </section>
+
+        <!--==================== NO PRODUCT FOUND ====================-->
+        <section class="no-product-container mt-5 d-none" id="no-product-found">
+            <img src="https://img.icons8.com/ios/452/empty-box.png" alt="No Products">
+            <h1>No Products Found</h1>
+            <p>We couldn't find any products that <br> match your search.</p>
+        </section>
+        
+        <!--==================== CART BUTTON ====================-->
+        <div class="cart-button" id="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-text">
+                Items in Cart 
+                <span class="cart-bracket">(</span>
+                <span class="cart-count">0</span>
+                <span class="cart-bracket">)</span>
+            </span>
+            <i class="fas fa-angle-double-right"></i>
+        </div>        
+    </main>   
+</body>
+</html>

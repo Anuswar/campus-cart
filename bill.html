@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmation</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    <!--==================== STYLE SHEETS ====================-->
+    <link rel="stylesheet" href="assets/css/library/Roboto/roboto.css" />
+    <link rel="stylesheet" href="assets/css/library/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/library/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/bill.css">
+
+    <!--==================== JAVASCRIPT ====================-->
+    <script defer src="js/library/infinite-scroll/infinite-scroll.pkgd.min.js"></script>
+    <script defer src="js/library/fuse/fuse.min.js"></script>
+    <script defer src="js/library/store/store.everything.min.js"></script>
+    <script defer src="js/library/lscache/lscache.min.js"></script>
+    <script defer src="js/library/jquery/jquery-3.6.0.min.js"></script>
+    <script defer src="js/bill.js"></script>
+</head>
+<body>
+
+    <!--==================== MAIN ====================-->
+    <main class="container">
+    
+        <!--==================== HEADER ====================-->
+        <img src="assets/images/campus-cart-logo-b.png" alt="Campus Cart Logo" class="logo">
+        <hr>
+    
+        <div class="confirmation-header">       
+            <div class="thank-you">Thank You for Your Order!</div>
+        </div>
+    
+        <!--==================== ORDER ====================-->
+        <div class="order-details">      
+            <h2>Order Confirmed</h2>       
+            <p><strong>Order ID:</strong> <span id="order-id"></span></p>       
+            <p><strong>Amount Paid:</strong><span id="amount-paid"></span></p>        
+            <p><strong>Collect on:</strong> <span id="order-date"></span></p>    
+        </div>
+    
+        <!--==================== INFORMATION ====================-->
+        <div class="question text-center">
+            <p>If you have any questions about your order, please contact us!</p>
+        </div>
+
+        <div class="row d-flex align-items-stretch" style="margin: 0 0 40px;">
+            <div class="col-12 col-md-8 mb-3 mb-md-0">
+                <h4>Pickup Location</h4>
+                <iframe class="map w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.343269737083!2d74.78291497508135!3d13.25391608708801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcaffcc3bfa5b3%3A0x286b61c40d47415c!2s7Q3M%2BWQQ%2C%20Vishwothama%20Nagar%2C%20Bantakal%2C%20Shankarpura%2C%20Karnataka%20574115!5e1!3m2!1sen!2sin!4v1730655765493!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        
+            <div class="col-12 col-md-4 contact-info d-flex flex-column">
+                <h4>Contact Information</h4>
+                <p><strong>Address:</strong> Vishwothama Nagar, Bantakal, Shankarpura, Karnataka 574115</p>
+                <p><strong>Email:</strong> support@campuscart.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Timings:</strong></p>
+                <ul>
+                    <li><strong>Monday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong>Tuesday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong>Wednesday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong>Thursday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong>Friday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong>Saturday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li><strong style="color: red;">Sunday:</strong> Closed</li> 
+                </ul>
+            </div>
+        </div>    
+    </main>
+</body>
+</html>

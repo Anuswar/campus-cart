@@ -1,0 +1,375 @@
+/* =============== VARIABLES =============== */
+:root {
+  --primary-color: #3b5998;         
+  --secondary-color: #ff6600;      
+  --text-color: #333333;           
+  --background-color: #f1f1f1;      
+  --card-background: #ffffff;       
+  --card-border: #e0e0e0;          
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --hover-card-shadow: rgba(0, 0, 0, 0.2); 
+  --button-bg: #ff9900;            
+  --button-hover: #cc7a00;        
+}
+
+/* =============== CUSTOM SCROLLBAR =============== */
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b5998; 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6600; 
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: #3b5998 #f1f1f1; 
+}
+
+/* =============== BASIC =============== */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  background-color: #eaeaea;
+  color: #111;
+}
+
+.container {
+  margin-top: 3rem !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1.5rem !important;
+    padding-bottom: 80px;
+  }
+}
+
+/* =============== ORDER SUMMARY =============== */
+.order-summary, .card {
+  background-color: var(--card-background);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  padding: 20px;
+  max-width: 400px;
+}
+
+.order-summary-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  border-bottom: 2px solid var(--card-border);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.total-text, .platform-fee {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  color: var(--text-color);
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  border-top: 2px solid #666;
+  padding-top: 12px;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .order-summary {
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  .order-summary-title {
+    font-size: 1.3rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+  }
+}
+
+/* =============== CART =============== */
+.cart-item {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.3s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 8px var(--hover-card-shadow);
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+.product-title {
+  font-size: 1.1em;
+  color: var(--text-color);
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-size: 0.9em;
+}
+
+/* Quantity Control Styles */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.quantity-control .btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 0.8em;
+  color: var(--text-color);
+}
+
+.quantity-control .btn:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+.quantity-control .quantity-input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 0 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+  .quantity-control .quantity-input {
+    width: 45px;
+  }
+}
+
+/* Skeleton Base Styles */
+.skeleton-img,
+.skeleton-title,
+.skeleton-price,
+.skeleton-btn,
+.skeleton-quantity,
+.skeleton-remove-btn {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.skeleton-img::before,
+.skeleton-title::before,
+.skeleton-price::before,
+.skeleton-btn::before,
+.skeleton-quantity::before,
+.skeleton-remove-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    animation: shimmer 1.5s infinite;
+}
+
+/* Skeleton Element Sizes */
+.skeleton-img {
+    width: 80px;
+    height: 80px;
+}
+
+.skeleton-title {
+    width: 120px;
+    height: 16px;
+    margin-bottom: 8px;
+}
+
+.skeleton-price {
+    width: 80px;
+    height: 14px;
+    margin-bottom: 8px;
+}
+
+.skeleton-quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.skeleton-btn {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.skeleton-quantity {
+    width: 50px;
+    height: 30px;
+    margin: 0 8px;
+}
+
+.skeleton-remove-btn {
+    width: 60px;
+    height: 30px;
+}
+
+/* Responsive Skeleton Adjustments */
+@media (max-width: 576px) {
+    .skeleton-quantity {
+        width: 45px;
+    }
+}
+
+/* Fade-in effect for loaded items */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-img::before,
+.skeleton-title::before,
+.skeleton-price::before,
+.skeleton-btn::before,
+.skeleton-quantity::before,
+.skeleton-remove-btn::before {
+  animation: shimmer 1s infinite; /* Reduced to 1 second */
+}
+
+.skeleton-loader {
+  background-color: #e0e0e0;
+  height: 200px; /* Height of your card */
+  margin: 10px 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      background-color: #e0e0e0;
+  }
+  50% {
+      background-color: #c0c0c0;
+  }
+  100% {
+      background-color: #e0e0e0;
+  }
+}
+
+/* =============== CHECKOUT BUTTON =============== */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  color: white; /* Ensure the button text is visible */
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color); /* Use secondary color for hover */
+}
+
+.btn-outline-danger {
+  font-size: 0.9em;
+  color: #ff5252;
+  border-color: #ff5252;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+/* Fixed Checkout Button for Small Screens */
+.fixed-bottom .btn {
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+/* Sticky Order Summary */
+.sticky-summary {
+  position: sticky;
+  top: 20px;
+  margin-bottom: 20px;
+}
+
+/* CSS for back icon */
+.back-icon {
+  font-size: 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  margin-bottom: .5rem;
+}
+
+.back-icon:hover {
+  transform: scale(1.1); 
+  color: #0056b3; 
+}
+
+/* Ensures icon and heading are centered and aligned */
+.d-flex.align-items-center h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem; 
+}
+
