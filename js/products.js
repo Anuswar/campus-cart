@@ -51,7 +51,7 @@ $(document).ready(function () {
     $(".cart-count").text(cartCount);
   }
 
-  updateCartCount(); 
+  updateCartCount();
 
   // Render skeletons for loading effect
   function renderSkeletons(count) {
@@ -133,7 +133,7 @@ $(document).ready(function () {
     if (!cachedTimestamp) return false;
 
     const now = Date.now();
-    const cacheAge = (now - cachedTimestamp) / (1000 * 60); 
+    const cacheAge = (now - cachedTimestamp) / (1000 * 60);
     return cacheAge < cacheExpirationMinutes;
   }
 
@@ -222,12 +222,12 @@ $(document).ready(function () {
           if (entry.isIntersecting) {
             currentPage++;
             loadProducts(currentPage, $("#search").val());
-            observer.disconnect(); 
+            observer.disconnect();
           }
         });
       },
       {
-        rootMargin: "100px", 
+        rootMargin: "100px",
       }
     );
 
@@ -276,7 +276,7 @@ $(document).ready(function () {
   });
 
   function setCartData(cart) {
-    lscache.set("cart", cart, 2 * 24 * 60); 
+    lscache.set("cart", cart, 2 * 24 * 60);
     lscache.set("cartCount", cartCount, 2 * 24 * 60);
   }
 

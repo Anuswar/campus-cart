@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   // Adjust itemsPerPage based on screen height to ensure initial fill
   function calculateItemsPerPage() {
-    const itemHeight = 150; 
+    const itemHeight = 150;
     itemsPerPage = Math.ceil(window.innerHeight / itemHeight);
   }
   calculateItemsPerPage();
@@ -77,21 +77,21 @@ $(document).ready(function () {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const itemsToRender = cartItems.slice(startIndex, endIndex);
-    
+
     // Remove previous skeletons
     cartItemsContainer.find(".skeleton").remove();
-    
+
     if (cartItems.length === 0) {
       emptyCartMessage.show();
       cartItemsContainer.hide();
     } else {
       emptyCartMessage.hide();
       cartItemsContainer.show();
-      
+
       let imagesLoaded = 0;
       const totalImages = itemsToRender.length;
-  
-      itemsToRender.forEach(productId => {
+
+      itemsToRender.forEach((productId) => {
         const item = cart[productId];
         const cartItemHTML = `
           <div class="cart-item d-flex align-items-center mb-4 p-3 shadow-sm rounded fade-in" data-product-id="${productId}">
@@ -110,48 +110,57 @@ $(document).ready(function () {
         `;
         cartItemsContainer.append(cartItemHTML);
       });
-  
+
       // Track image load events for each product image
-      cartItemsContainer.find(".product-img").on("load", function () {
-        imagesLoaded++;
-  
-        // Remove skeletons once all images are loaded
-        if (imagesLoaded === totalImages) {
-          cartItemsContainer.find(".skeleton").remove();
-        }
-      }).on("error", function () {
-        // Fallback image in case of load error
-        $(this).attr("src", "path/to/fallback-image.jpg");
-        imagesLoaded++;
-  
-        // Remove skeletons even if some images failed to load
-        if (imagesLoaded === totalImages) {
-          cartItemsContainer.find(".skeleton").remove();
-        }
-      });
-  
+      cartItemsContainer
+        .find(".product-img")
+        .on("load", function () {
+          imagesLoaded++;
+
+          // Remove skeletons once all images are loaded
+          if (imagesLoaded === totalImages) {
+            cartItemsContainer.find(".skeleton").remove();
+          }
+        })
+        .on("error", function () {
+          // Fallback image in case of load error
+          $(this).attr("src", "path/to/fallback-image.jpg");
+          imagesLoaded++;
+
+          // Remove skeletons even if some images failed to load
+          if (imagesLoaded === totalImages) {
+            cartItemsContainer.find(".skeleton").remove();
+          }
+        });
+
       observeLastProduct();
     }
-    
+
     attachEventHandlers();
     isLoading = false;
-  }  
+  }
 
   function attachEventHandlers() {
-    $(".quantity-increase").off("click").on("click", function () {
-      const productId = $(this).closest(".cart-item").data("product-id");
-      updateQuantity(productId, 1);
-    });
+    $(".quantity-increase")
+      .off("click")
+      .on("click", function () {
+        const productId = $(this).closest(".cart-item").data("product-id");
+        updateQuantity(productId, 1);
+      });
 
-    $(".quantity-decrease").off("click").on("click", function () {
-      const productId = $(this).closest(".cart-item").data("product-id");
-      updateQuantity(productId, -1);
-    });
+    $(".quantity-decrease")
+      .off("click")
+      .on("click", function () {
+        const productId = $(this).closest(".cart-item").data("product-id");
+        updateQuantity(productId, -1);
+      });
 
-    $(".remove-item").off("click").on("click", function () {
-      const productId = $(this).closest(".cart-item").data("product-id");
-      removeItem(productId);
-    });
+    $(".remove-item")
+      .off("click")
+      .on("click", function () {
+        const productId = $(this).closest(".cart-item").data("product-id");
+        removeItem(productId);
+      });
   }
 
   function updateQuantity(productId, change) {
@@ -180,22 +189,25 @@ $(document).ready(function () {
     renderCartItems(currentPage);
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !isLoading) {
-        isLoading = true;
-        currentPage++;
-        renderCartItems(currentPage);
-      }
-    });
-  }, {
-    root: null,
-    rootMargin: '100px',
-    threshold: 1.0,
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !isLoading) {
+          isLoading = true;
+          currentPage++;
+          renderCartItems(currentPage);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "100px",
+      threshold: 1.0,
+    }
+  );
 
   function observeLastProduct() {
-    const lastProduct = cartItemsContainer.find('.cart-item').last();
+    const lastProduct = cartItemsContainer.find(".cart-item").last();
     if (lastProduct.length) {
       observer.observe(lastProduct[0]);
     }

@@ -13,24 +13,10 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400; /* Regular */
-}
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700; /* Bold */
-}
-
-p.italic {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-h2.thin {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100; /* Thin */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ===================== BASIC RESET ===================== */
@@ -52,10 +38,9 @@ body {
   overflow-x: hidden;
 }
 
-
 @media only screen and (max-width: 768px) {
   main {
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
   }
 }
 
@@ -103,7 +88,7 @@ header {
 }
 
 main {
-  padding-top: 100px; 
+  padding-top: 100px;
 }
 
 header img {
@@ -111,11 +96,11 @@ header img {
   cursor: pointer;
 }
 
-.logo-1{
+.logo-1 {
   display: none;
 }
 
-.logo-2{
+.logo-2 {
   display: block;
 }
 
@@ -124,7 +109,7 @@ header img {
   height: 30px;
 }
 
-.college-logo-1, 
+.college-logo-1,
 .college-logo-2 {
   height: 45px;
 }
@@ -203,7 +188,7 @@ header img {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 /* Product Card Styles */
@@ -217,7 +202,7 @@ header img {
 .image-container {
   position: relative;
   height: 200px;
-  background-color: #e0e0e0; 
+  background-color: #e0e0e0;
   border-radius: 6px 6px 0 0;
   overflow: hidden;
   display: flex;
@@ -267,8 +252,8 @@ header img {
 /* Rupee symbol styling */
 .currency-symbol {
   font-size: 1.2rem;
-  color: #28a745; 
-  margin-right: 5px; 
+  color: #28a745;
+  margin-right: 5px;
 }
 
 /* Price styling */
@@ -277,7 +262,6 @@ header img {
   font-weight: bold;
   color: #28a745;
 }
-
 
 /* ===================== SKELETON LOADER ===================== */
 .skeleton {
@@ -345,15 +329,15 @@ header img {
 
 /* ===================== NO PRODUCT FOUND ===================== */
 .no-product-container {
-  position: absolute; 
+  position: absolute;
   top: 50%;
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 60px 20px; 
+  padding: 60px 20px;
   color: #333;
   width: 100%;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .no-product-container img {
@@ -387,7 +371,7 @@ header img {
   bottom: 20px;
   right: 20px;
   background-color: rgba(33, 37, 41);
-  color: white; 
+  color: white;
   padding: 10px 20px;
   border-radius: 40px;
   display: flex;
@@ -399,7 +383,7 @@ header img {
   cursor: pointer;
   transition: transform 0.3s ease-in-out, background-color 0.3s;
   z-index: 1000;
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
 /* Hover Animation */
@@ -410,7 +394,8 @@ header img {
 
 /* Bounce Animation */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -435,21 +420,21 @@ header img {
 
 .cart-count {
   font-weight: bold;
-  color: white; 
+  color: white;
 }
 
 /* Large screen (above 768px) animation */
 @media (min-width: 769px) {
   .cart-button {
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out;
   }
 
   .cart-button-hidden {
-    transform: translateY(100px); 
+    transform: translateY(100px);
   }
 
   .cart-button-show {
-    transform: translateY(0); 
+    transform: translateY(0);
   }
 }
 
@@ -458,18 +443,18 @@ header img {
   .cart-button {
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%); 
-    width: 90%; 
+    transform: translateX(-50%);
+    width: 90%;
     right: auto;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 
   .cart-button-hidden {
-    transform: translateY(100px) translateX(-50%); 
+    transform: translateY(100px) translateX(-50%);
   }
 
   .cart-button-show {
-    transform: translateX(-50%) translateY(0); 
+    transform: translateX(-50%) translateY(0);
   }
 
   .cart-button i {
@@ -477,7 +462,7 @@ header img {
   }
 
   .cart-text {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
   }
 }

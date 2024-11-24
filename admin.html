@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <!--==================== STYLE SHEETS ====================-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/admin.css">\
+
+  <!--==================== JAVASCRIPT ====================-->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <div id="wrapper" class="d-flex">
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark text-white d-flex flex-column justify-content-between vh-100">
+      <div>
+
+        <!-- Sidebar Header -->
+        <div class="d-flex align-items-center px-3 py-3 border-bottom border-secondary">
+          <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Profile">
+          <div>
+            <p class="mb-0 fw-bold">Admin</p>
+            <small>admin@example.com</small>
+          </div>
+          <button id="close-sidebar" class="btn btn-sm btn-danger ms-auto d-lg-none">×</button>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <ul class="nav flex-column mt-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section active" data-target="#Dashboard">
+              <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#Order">
+              <i class="fas fa-shopping-cart me-2"></i> Order
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#Products">
+              <i class="fas fa-box me-2"></i> Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#Payment">
+              <i class="fas fa-credit-card me-2"></i> Payment
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#holidays">
+              <i class="fas fa-calendar-alt me-2"></i> Holidays
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#Issue">
+              <i class="fas fa-exclamation-circle me-2"></i> Issues
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white toggle-section" data-target="#Credits">
+              <i class="fas fa-award me-2"></i> Credits
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="d-lg-none"></div>
+
+    <!-- Page Content -->
+    <div id="page-content" class="flex-grow-1">
+      <!-- Header -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <!-- Sidebar Toggle Button and Logo -->
+          <div class="d-flex align-items-center">
+
+            <button id="toggle-sidebar" class="btn btn-primary me-3">
+              <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="#" class="navbar-brand">
+              <img src="assets/images/campus-cart-logo-b.png" alt="Logo" class="img-fluid d-sm-block" style="max-height: 40px; max-width: 160px;">
+            
+            </a>
+          </div>
+      
+          <!-- Right Side Icons and Profile -->
+          <div class="d-flex align-items-center ms-auto">
+      
+            <!-- Profile Dropdown -->
+            <div class="dropdown">
+              <button class="btn btn-primary d-flex align-items-center" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Profile">
+
+                <span class="d-none d-sm-inline">Admin</span>
+
+                <i class="fas fa-chevron-down ms-2"></i>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+
+      <!-- Sections -->
+      <div id="Dashboard" class="section bg-primary text-white text-center py-5">
+        <h1>Dashboard</h1>
+      </div>
+
+      <div id="Order" class="section bg-secondary text-white text-center py-5">
+        <h1>Order Requests</h1>
+      </div>
+
+      <div id="Products" class="section bg-light text-center py-5">
+        <h1>Manage Products</h1>
+      </div>
+
+      <div id="Payment" class="section bg-secondary text-white text-center py-5">
+        <h1>Payment Transactions</h1>
+      </div>
+
+      <div id="holidays" class="section bg-light text-center py-5">
+        <h1>Set Holidays</h1>
+      </div>
+
+      <div id="Issue" class="section bg-primary text-white text-center py-5">
+        <h1>Reported Issues</h1>
+      </div>
+
+      <div id="Credits" class="section bg-light text-center py-5">
+        <h1>Credits</h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
