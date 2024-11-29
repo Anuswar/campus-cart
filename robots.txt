@@ -1,8 +1,10 @@
 # Allow all bots to crawl everything (except restricted directories)
 User-agent: *
-Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
+Disallow: /checkout
+Disallow: /bill
+Disallow: /admin
 
 # Allow search engines to crawl important files
 Allow: /public/
@@ -12,4 +14,4 @@ User-agent: BadBot
 Disallow: /
 
 # Sitemap for better indexing
-Sitemap: 
+Sitemap: https://campus-cart.netlify.app/sitemap.xml
