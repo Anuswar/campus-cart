@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report an Issue | Campus Cart</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,13 +81,24 @@
         text-align: center;
       }
 
+      .banner h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .banner p {
+        font-size: 1.2rem;
+      }
+
+      /* ===================== FORM ===================== */
       .report-container {
         max-width: 700px;
         margin: -60px auto 30px;
         padding: 20px;
         background: #ffffff;
         border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       }
 
       .form-title {
@@ -94,53 +106,6 @@
         font-weight: bold;
         color: #343a40;
         margin-bottom: 20px;
-      }
-
-      .btn-custom {
-        background: linear-gradient(to right, #28a745, #218838);
-        color: #ffffff;
-        font-weight: bold;
-        padding: 10px 30px;
-        border: none;
-        border-radius: 50px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
-      }
-
-      .btn-custom:hover {
-        background: linear-gradient(to right, #218838, #1e7e34);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05);
-        color: #ffffff;
-      }
-
-      .footer {
-        background-color: rgba(85, 74, 255, 1);
-        color: white;
-        text-align: center;
-        padding: 50px;
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-        .banner {
-          padding: 40px 10px;
-        }
-
-        .form-title {
-          font-size: 1.25rem;
-        }
-
-        .report-container {
-          margin: 0 auto;
-          box-shadow: none;
-          border-radius: 0;
-          padding: 15px;
-        }
-
-        .btn-custom {
-          width: 100%;
-        }
       }
 
       .is-invalid {
@@ -153,16 +118,75 @@
         color: red;
         font-weight: bold;
       }
+
+      .btn-custom {
+        background: -webkit-gradient(linear, left top, right top, from(#28a745), to(#218838));
+        background: -o-linear-gradient(left, #28a745, #218838);
+        background: linear-gradient(to right, #28a745, #218838);
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 50px;
+        -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-custom:hover {
+        background: -webkit-gradient(linear, left top, right top, from(#218838), to(#1e7e34));
+        background: -o-linear-gradient(left, #218838, #1e7e34);
+        background: linear-gradient(to right, #218838, #1e7e34);
+        -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        color: #ffffff;
+      }
+
+      /* ===================== FOOTER ===================== */
+      .footer {
+        background-color: rgba(85, 74, 255, 1);
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
+
+      /* ===================== RESONSIVE ===================== */
+      @media (max-width: 768px) {
+        .banner {
+          padding: 40px 10px;
+        }
+
+        .form-title {
+          font-size: 1.25rem;
+        }
+
+        .report-container {
+          margin: 0 auto;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          border-radius: 0;
+          padding: 15px;
+        }
+
+        .btn-custom {
+          width: 100%;
+        }
+      }
     </style>
 </head>
 <body>
-    <!-- Banner Section -->
+    <!--==================== BANNER ====================-->
     <div class="banner">
         <h1>Report an Issue</h1>
-        <p>Found a bug, glitch, or issue? Let us know so we can make the platform better!</p>
+        <p >Found a bug, glitch, or issue? Let us know so we can make the platform better!</p>
     </div>
 
-    <!-- Form Section -->
+    <!--==================== FORM ====================-->
     <div class="container">
         <div class="report-container">
             <form id="error-report-form" autocomplete="on"  novalidate="novalidate">
@@ -223,6 +247,7 @@
         </div>
     </div>
 
+    <!--==================== FOOTER ====================-->
     <div class="footer"></div>
 
     <!-- JustValidate Library -->
