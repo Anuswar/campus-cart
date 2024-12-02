@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 /* ===================== GLOBAL VARIABLES ===================== */
 :root {
   --primary-color: #3b5998;
@@ -51,30 +53,31 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--light);
+  background: #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
+  background-color: #ff6600;
   border-radius: 10px;
-  border: 3px solid var(--light);
+  border: 3px solid #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary);
+  background-color: #cc5200;
 }
 
 /* For Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary) var(--light);
+  scrollbar-color: #ff6600 #f0f0f0;
 }
 
 /* General Styles (applied to all browsers) */
 body {
-  scrollbar-color: var(--primary) var(--light);
+  scrollbar-color: #ff6600 #f0f0f0;
   scrollbar-width: thin;
 }
+
 
 /* ===================== HEADER ===================== */
 header {
@@ -85,10 +88,6 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-}
-
-main {
-  padding-top: 100px;
 }
 
 header img {
@@ -157,15 +156,19 @@ header img {
 }
 
 .search-btn {
-  background-color: #e6e6e6;
+  background-color: #ff6600;
   border: none;
   border-radius: 0 30px 30px 0;
   padding: 10px 15px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
+.search-btn i{
+  color: #fff;
+}
+
 .search-btn:hover {
-  background-color: #cccccc;
+  background-color: #cc5200;
   transform: scale(1.05);
 }
 
@@ -329,15 +332,18 @@ header img {
 
 /* ===================== NO PRODUCT FOUND ===================== */
 .no-product-container {
-  position: absolute;
+  position: fixed; 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   text-align: center;
-  padding: 60px 20px;
   color: #333;
   width: 100%;
-  z-index: 1;
+  height: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
 }
 
 .no-product-container img {
@@ -348,11 +354,13 @@ header img {
 .no-product-container h1 {
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
 }
 
 .no-product-container p {
   font-size: 16px;
   color: #757575;
+  margin: 10px 0 0; 
 }
 
 .no-product-container p br {
@@ -387,7 +395,7 @@ header img {
 }
 
 .cart-button:hover {
-  background-color: var(--secondary-color);
+  background-color: #ff6600;
   animation: bounce 0.3s ease-in-out;
 }
 
@@ -450,3 +458,232 @@ header img {
     transform: translateX(-50%) translateY(0);
   }
 }
+
+
+
+
+/* =============== BANNER =============== */
+#banner {
+  margin-bottom: 2rem;
+  padding-top: 69px;
+  background-color: rgba(85, 74, 255, 1);
+}
+
+.glide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.banner-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px; 
+  width: 100%;
+}
+
+.banner-text {
+  width: 45%; 
+  padding-right: 20px;
+}
+
+.banner-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 16px;
+  color: #555;
+}
+
+.banner-image {
+  width: 45%; 
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  #banner {
+      margin-bottom: 1.5rem;
+  }
+
+  .banner-slide {
+      flex-direction: column;
+  }
+
+  .banner-text {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+  }
+
+  .banner-image {
+      width: 100%;
+      margin-top: 15px;
+  }
+
+  .banner-image img {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  #banner {
+      margin-bottom: 1rem;
+      padding-top: 90px;
+  }
+
+  .banner-slide {
+      flex-direction: column; 
+  }
+
+  .banner-text {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+  }
+
+  .banner-image {
+      width: 100%;
+      margin-top: 15px;
+  }
+
+  .banner-image img {
+      width: 100%;
+      margin: 0 auto;
+  }
+}
+
+.banner-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 1); 
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.banner-text h2 {
+  font-size: 36px; 
+  font-weight: 800;
+  margin-bottom: 15px; 
+  color: rgba(255, 255, 255, 1); 
+  display: flex;
+  align-items: center;
+  line-height: 128%;
+  gap: 15px; 
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.banner-text h2 i {
+  background-color: #ff6600;
+  color: rgba(255, 255, 255, 1);;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  #banner {
+      margin-bottom: 1rem;
+      padding-top: 90px;
+  }
+
+  .banner-slide {
+      flex-direction: column; 
+  }
+
+  .banner-text {
+      width: 100%;
+      padding-right: 0;
+      text-align: left; 
+  }
+
+  .banner-image {
+      width: 100%;
+      margin-top: 15px;
+  }
+
+  .banner-image img {
+      width: 100%;
+      margin: 0 auto;
+  }
+}
+
+.fw_700 {
+  font-weight: 700 !important;
+}
+.nw1-clr {
+  color: rgba(255, 255, 255, 1);;
+}
+.fs20 {
+  font-size: 16px !important;
+  line-height: 1.4;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+
+@media (max-width: 767px) {
+  .glide__slide svg {
+      width: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .glide__slide svg {
+      width: 200px; 
+  }
+}
+
+@media (max-width: 1199px) {
+  .glide__slide svg {
+      width: 200px;
+  }
+}
+
+.banner-image img {
+  max-width: 90%;
+  height: auto; 
+  object-fit: contain; 
+  margin: 0 auto;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .banner-image img {
+      max-width: 80%; 
+      margin: 0 auto;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .banner-image img {
+      max-width: 100%;
+      margin: 0 auto;
+  }
+}
+

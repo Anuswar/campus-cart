@@ -46,14 +46,9 @@ $(document).ready(function () {
   let cartCount = lscache.get("cartCount") || 0;
   const productCounts = store.get("productCounts") || {};
 
-  // Function to update cart count display and visibility of the cart button
+  // Function to update cart count display
   function updateCartCount() {
     $(".cart-count").text(cartCount);
-    if (cartCount > 0) {
-      cartButton.show();
-    } else {
-      cartButton.hide();
-    }
   }
 
   updateCartCount();
@@ -281,36 +276,42 @@ $(document).ready(function () {
   });
 
   function setCartData(cart) {
-    lscache.set("cart", cart, 2 * 24);
+    lscache.set("cart", cart, 2 * 24 * 60);
+    lscache.set("cartCount", cartCount, 2 * 24 * 60);
   }
 
-  // Handle adding products to the cart
-  productContainer.on("click", ".product-card .btn", function () {
-    const productId = $(this).closest(".product-container").data("product-id");
-    const cart = getCartData();
-    const product = allProducts.find((product) => product.id === productId);
+  function handleAddToCart(productId, productName, productPrice, productImage) {
+    let cart = getCartData();
 
     if (cart[productId]) {
-      cart[productId].count++;
+      cart[productId].quantity++;
     } else {
       cart[productId] = {
-        name: product.name,
-        price: product.cost,
-        count: 1,
-        image: product.image,
+        name: productName,
+        price: productPrice,
+        image: productImage,
         quantity: 1,
       };
     }
 
-    setCartData(cart);
-
     cartCount++;
-    lscache.set("cartCount", cartCount);
     updateCartCount();
+    setCartData(cart);
+  }
+
+  productContainer.on("click", ".btn-outline-primary", function () {
+    const productElement = $(this).closest(".product-container");
+    const productId = productElement.data("product-id");
+    const productName = productElement.find(".card-title").text();
+    const productPrice = parseFloat(
+      productElement.find(".card-price").text().replace("₹", "")
+    );
+    const productImage = productElement.find(".product-image").attr("src");
+
+    handleAddToCart(productId, productName, productPrice, productImage);
   });
 
-  // =============== INITIAL LOAD ===============
+  // Initial product load
   loadProducts(currentPage);
-
   handleScroll();
 });
