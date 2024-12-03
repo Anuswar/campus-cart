@@ -46,9 +46,16 @@ $(document).ready(function () {
   let cartCount = lscache.get("cartCount") || 0;
   const productCounts = store.get("productCounts") || {};
 
-  // Function to update cart count display
+  // Function to update cart count display and visibility
   function updateCartCount() {
     $(".cart-count").text(cartCount);
+    
+    // Toggle cart button visibility based on cart count
+    if (cartCount > 0) {
+      $(".cart-button").removeClass("d-none");
+    } else {
+      $(".cart-button").addClass("cart-button-show");
+    }
   }
 
   updateCartCount();
@@ -240,7 +247,20 @@ $(document).ready(function () {
     currentPage = 1;
     productContainer.empty();
     loadProducts(currentPage, searchQuery);
+    
+    // Close keyboard by removing focus from search input
+    $("#search").blur();
   }
+
+  // Also modify the Enter key handler
+  $("#search").on("keydown", function (event) {
+    if (event.key === "Enter") {
+      performSearch();
+    
+      // Close keyboard
+      $(this).blur();
+    }
+  });
 
   // Trigger search on button click or Enter key
   $("#search-btn").on("click", performSearch);
