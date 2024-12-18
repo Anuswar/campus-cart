@@ -30,8 +30,16 @@ $(document).ready(function () {
     for (let productId in cart) {
       cartCount += cart[productId].quantity;
     }
-    $(".cart-count").text(cartCount);
+    $(".cart-count").text(cartCount); 
     lscache.set("cartCount", cartCount, cartExpirationMinutes);
+
+    // Update the cart summary text
+    const cartSummaryText =
+      cartCount === 1
+        ? `<strong>${cartCount} item</strong> in your cart`
+        : `<strong>${cartCount} items</strong> in your cart`;
+
+    $(".cart-summary").html(cartSummaryText);
   }
 
   function calculateAndUpdateTotals() {
@@ -216,8 +224,10 @@ $(document).ready(function () {
   $("#checkout-btn, #checkout-btn-mobile").on("click", redirectToCheckout);
 
   function redirectToCheckout() {
+    const grandTotal = parseFloat($("#grand-total").text());
+    localStorage.setItem("grandTotal", grandTotal); // Save grandTotal to localStorage
     window.location.href = "bill.html";
-  }
+}
 
   updateCartCount();
   renderSkeletons(itemsPerPage);
