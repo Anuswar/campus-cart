@@ -13,7 +13,7 @@
     "id": 2,
     "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+2",
     "name": "Notebook",
-    "cost": "50",
+    "cost": "45",
     "tags": ["Stationery", "Writing", "Notebook"],
     "company": "PaperMate",
     "description": "High-quality notebook with lined pages for easy writing.",
