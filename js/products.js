@@ -159,8 +159,8 @@ $(document).ready(function () {
           return response.json();
         })
         .then((products) => {
-          allProducts = products;
-          store.set(productsCacheKey, products);
+          allProducts = removeDuplicates(products);
+          store.set(productsCacheKey, allProducts);
           store.set(cacheTimestampKey, Date.now());
           processProducts(allProducts, page, searchQuery);
         })
@@ -175,6 +175,15 @@ $(document).ready(function () {
     }
   }
 
+  // Remove duplicates from the product list
+  function removeDuplicates(products) {
+    return products.filter((value, index, self) => 
+      index === self.findIndex((t) => (
+        t.id === value.id
+      ))
+    );
+  }
+
   // Process and render products after fetching or from cache
   function processProducts(products, page, searchQuery) {
     const options = {
@@ -186,6 +195,10 @@ $(document).ready(function () {
     let filteredProducts = searchQuery
       ? fuse.search(searchQuery).map((result) => result.item)
       : products;
+
+    // Remove duplicates from search results
+    filteredProducts = removeDuplicates(filteredProducts);
+
     const start = (page - 1) * productsPerPage;
     const end = start + productsPerPage;
     const paginatedProducts = filteredProducts.slice(start, end);
