@@ -33,7 +33,7 @@ $(document).ready(function () {
     responsive: true,
     pageLength: 10,
     dom: "Bfrtip",
-    columnDefs: [{ orderable: false, targets: [0, 1, 2, 4, 5, 7, 8, 9] }],
+    columnDefs: [{ orderable: false, targets: [1, 8, 9] }],
     buttons: {
       buttons: [
         {
@@ -41,7 +41,6 @@ $(document).ready(function () {
           className: "export-excel",
           title: "Product List",
           exportOptions: {
-            // Export selected rows if any checkboxes are selected
             modifier: {
               selected: true,
             },
@@ -79,6 +78,37 @@ $(document).ready(function () {
     },
   });
 
+  // Load products from JSON file and populate the table
+  $.getJSON("data/products.json", function (data) {
+    data.forEach((product) => {
+      const statusBadge =
+        product.quantity > 0
+          ? '<span class="badge bg-success">In Stock</span>'
+          : '<span class="badge bg-danger">Out of Stock</span>';
+      const actions = `
+        <div class="btn-group" role="group">
+          <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" title="Edit this product">
+            <i class="fa fa-pencil"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" data-bs-toggle="tooltip" title="Delete this product">
+            <i class="fa fa-trash"></i>
+          </button>
+        </div>`;
+      table.row.add([
+        product.id,
+        `<img src="${product.image}" alt="${product.name}" class="img-thumbnail" style="width: 50px;" />`,
+        product.name,
+        `$${product.cost}`,
+        product.tags.join(", "),
+        product.description,
+        product.quantity || 0,
+        product.company,
+        statusBadge,
+        actions,
+      ]).draw();
+    });
+  });
+
   // Search functionality for DataTable default search bar
   $("#searchBar-p").on("keyup", function () {
     const searchValue = this.value;
@@ -111,17 +141,7 @@ $(document).ready(function () {
   $(".export-btn-p").on("click", function (e) {
     e.preventDefault();
     const format = $(this).data("format");
-
-    // Check if any checkboxes are selected
-    const selectedRows = table.rows({ selected: true }).data().toArray();
-
-    if (selectedRows.length === 0) {
-      // If no rows are selected, export all rows
-      table.button(`.export-${format}`).trigger();
-    } else {
-      // If some rows are selected, export only selected rows
-      table.button(`.export-${format}`).trigger();
-    }
+    table.button(`.export-${format}`).trigger();
   });
 });
 

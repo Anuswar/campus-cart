@@ -1,209 +1,420 @@
 [
-    {
-        "id": 1,
-        "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+1",
-        "name": "Wireless Headphones",
-        "cost": "89.99",
-        "tags": ["Electronics", "Audio", "Wireless"],
-        "company": "AudioTech",
-        "description": "High-quality wireless headphones with noise cancellation."
-    },
-    {
-        "id": 2,
-        "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+2",
-        "name": "Smart Watch",
-        "cost": "199.99",
-        "tags": ["Wearables", "Fitness", "Electronics"],
-        "company": "TechGiant",
-        "description": "Track your fitness and stay connected with this smart watch."
-    },
-    {
-        "id": 3,
-        "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+3",
-        "name": "Portable Charger",
-        "cost": "29.99",
-        "tags": ["Accessories", "Portable", "Charging"],
-        "company": "PowerPlus",
-        "description": "Compact portable charger with fast charging capabilities."
-    },
-    {
-        "id": 4,
-        "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+4",
-        "name": "Bluetooth Speaker",
-        "cost": "49.99",
-        "tags": ["Audio", "Wireless", "Portable"],
-        "company": "SoundWave",
-        "description": "Enjoy crystal-clear sound with this portable Bluetooth speaker."
-    },
-    {
-        "id": 5,
-        "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+5",
-        "name": "Gaming Mouse",
-        "cost": "59.99",
-        "tags": ["Gaming", "Accessories", "Ergonomic"],
-        "company": "Gamer's Edge",
-        "description": "Ergonomic design and customizable buttons for the ultimate gaming experience."
-    },
-    {
-        "id": 6,
-        "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+6",
-        "name": "Laptop Stand",
-        "cost": "39.99",
-        "tags": ["Office", "Accessories", "Adjustable"],
-        "company": "ErgoTech",
-        "description": "Adjustable laptop stand for better posture and airflow."
-    },
-    {
-        "id": 7,
-        "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+7",
-        "name": "Smartphone",
-        "cost": "699.99",
-        "tags": ["Electronics", "Mobile", "Smartphone"],
-        "company": "MobileCorp",
-        "description": "Latest smartphone with cutting-edge features and high-resolution camera."
-    },
-    {
-        "id": 8,
-        "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+8",
-        "name": "LED Monitor",
-        "cost": "149.99",
-        "tags": ["Display", "Electronics", "27-inch"],
-        "company": "VisionTech",
-        "description": "27-inch LED monitor with stunning display quality."
-    },
-    {
-        "id": 9,
-        "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+9",
-        "name": "VR Headset",
-        "cost": "399.99",
-        "tags": ["Gaming", "VR", "Electronics"],
-        "company": "VR World",
-        "description": "Experience immersive virtual reality gaming like never before."
-    },
-    {
-        "id": 10,
-        "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+10",
-        "name": "Mechanical Keyboard",
-        "cost": "89.99",
-        "tags": ["Accessories", "Keyboard", "Mechanical"],
-        "company": "KeyMaster",
-        "description": "Responsive mechanical keyboard with customizable RGB lighting."
-    },
-    {
-        "id": 11,
-        "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+11",
-        "name": "4K Action Camera",
-        "cost": "299.99",
-        "tags": ["Camera", "Outdoor", "4K"],
-        "company": "CamPro",
-        "description": "Capture stunning 4K video with this durable action camera."
-    },
-    {
-        "id": 12,
-        "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+12",
-        "name": "Noise Cancelling Earbuds",
-        "cost": "79.99",
-        "tags": ["Audio", "Wireless", "Earbuds"],
-        "company": "SilentTech",
-        "description": "Compact noise-cancelling earbuds with superior sound quality."
-    },
-    {
-        "id": 13,
-        "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+13",
-        "name": "Smart Thermostat",
-        "cost": "129.99",
-        "tags": ["Home", "Smart", "Thermostat"],
-        "company": "HomeIQ",
-        "description": "Control your home's temperature remotely with this smart thermostat."
-    },
-    {
-        "id": 14,
-        "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+14",
-        "name": "Electric Kettle",
-        "cost": "29.99",
-        "tags": ["Kitchen", "Electric", "Kettle"],
-        "company": "BrewMaster",
-        "description": "Fast-boiling electric kettle with automatic shut-off feature."
-    },
-    {
-        "id": 15,
-        "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+15",
-        "name": "Fitness Tracker",
-        "cost": "59.99",
-        "tags": ["Wearables", "Fitness", "Electronics"],
-        "company": "FitTech",
-        "description": "Track your steps, heart rate, and calories burned."
-    },
-    {
-        "id": 16,
-        "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+16",
-        "name": "Gaming Chair",
-        "cost": "149.99",
-        "tags": ["Furniture", "Gaming", "Ergonomic"],
-        "company": "Gamer's Lounge",
-        "description": "Ergonomic gaming chair with adjustable height and reclining back."
-    },
-    {
-        "id": 17,
-        "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+17",
-        "name": "Smart Door Lock",
-        "cost": "179.99",
-        "tags": ["Home", "Security", "Smart"],
-        "company": "SecureHome",
-        "description": "Control your door lock from your phone with this smart lock."
-    },
-    {
-        "id": 18,
-        "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+18",
-        "name": "Electric Toothbrush",
-        "cost": "19.99",
-        "tags": ["Health", "Personal Care", "Electric"],
-        "company": "BrightSmile",
-        "description": "Electric toothbrush with multiple brushing modes for optimal oral care."
-    },
-    {
-        "id": 19,
-        "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+19",
-        "name": "Robot Vacuum",
-        "cost": "199.99",
-        "tags": ["Home", "Cleaning", "Robot"],
-        "company": "CleanBot",
-        "description": "Automated robot vacuum cleaner with scheduling and remote control."
-    },
-    {
-        "id": 20,
-        "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+20",
-        "name": "Smart Light Bulb",
-        "cost": "15.99",
-        "tags": ["Home", "Smart", "Lighting"],
-        "company": "Lightify",
-        "description": "Change colors and dim lighting with this smart bulb controlled by your phone."
-    },
-    {
-        "id": 21,
-        "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+21",
-        "name": "Streaming Microphone",
-        "cost": "49.99",
-        "tags": ["Audio", "Streaming", "Microphone"],
-        "company": "SoundPro",
-        "description": "High-quality streaming microphone with noise reduction."
-    },
-    {
-        "id": 22,
-        "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+22",
-        "name": "Smart Scale",
-        "cost": "29.99",
-        "tags": ["Fitness", "Smart", "Scale"],
-        "company": "FitScale",
-        "description": "Track your weight, BMI, and body fat percentage with this smart scale."
-    },
-    {
-        "id": 23,
-        "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+23",
-        "name": "3D Printer",
-        "cost": "499.99",
-        "tags": ["Electronics", "DIY", "3D Printing"],
-        "company": "PrintMaster",
-        "description": "Create your own designs with this compact 3D printer."
-    }
+  {
+    "id": 1,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+1",
+    "name": "Wireless Headphones",
+    "cost": "89.99",
+    "tags": ["Electronics", "Audio", "Wireless"],
+    "company": "AudioTech",
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "quantity": 50
+  },
+  {
+    "id": 2,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+2",
+    "name": "Smart Watch",
+    "cost": "199.99",
+    "tags": ["Wearables", "Fitness", "Electronics"],
+    "company": "TechGiant",
+    "description": "Track your fitness and stay connected with this smart watch.",
+    "quantity": 30
+  },
+  {
+    "id": 3,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+3",
+    "name": "Portable Charger",
+    "cost": "29.99",
+    "tags": ["Accessories", "Portable", "Charging"],
+    "company": "PowerPlus",
+    "description": "Compact portable charger with fast charging capabilities.",
+    "quantity": 100
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+4",
+    "name": "Bluetooth Speaker",
+    "cost": "49.99",
+    "tags": ["Audio", "Wireless", "Portable"],
+    "company": "SoundWave",
+    "description": "Enjoy crystal-clear sound with this portable Bluetooth speaker.",
+    "quantity": 75
+  },
+  {
+    "id": 5,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+5",
+    "name": "Gaming Mouse",
+    "cost": "59.99",
+    "tags": ["Gaming", "Accessories", "Ergonomic"],
+    "company": "Gamer's Edge",
+    "description": "Ergonomic design and customizable buttons for the ultimate gaming experience.",
+    "quantity": 40
+  },
+  {
+    "id": 6,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+6",
+    "name": "Laptop Stand",
+    "cost": "39.99",
+    "tags": ["Office", "Accessories", "Adjustable"],
+    "company": "ErgoTech",
+    "description": "Adjustable laptop stand for better posture and airflow.",
+    "quantity": 60
+  },
+  {
+    "id": 7,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+7",
+    "name": "Smartphone",
+    "cost": "699.99",
+    "tags": ["Electronics", "Mobile", "Smartphone"],
+    "company": "MobileCorp",
+    "description": "Latest smartphone with cutting-edge features and high-resolution camera.",
+    "quantity": 25
+  },
+  {
+    "id": 8,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+8",
+    "name": "LED Monitor",
+    "cost": "149.99",
+    "tags": ["Display", "Electronics", "27-inch"],
+    "company": "VisionTech",
+    "description": "27-inch LED monitor with stunning display quality.",
+    "quantity": 35
+  },
+  {
+    "id": 9,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+9",
+    "name": "VR Headset",
+    "cost": "399.99",
+    "tags": ["Gaming", "VR", "Electronics"],
+    "company": "VR World",
+    "description": "Experience immersive virtual reality gaming like never before.",
+    "quantity": 20
+  },
+  {
+    "id": 10,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+10",
+    "name": "Mechanical Keyboard",
+    "cost": "89.99",
+    "tags": ["Accessories", "Keyboard", "Mechanical"],
+    "company": "KeyMaster",
+    "description": "Responsive mechanical keyboard with customizable RGB lighting.",
+    "quantity": 55
+  },
+  {
+    "id": 11,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+11",
+    "name": "4K Action Camera",
+    "cost": "299.99",
+    "tags": ["Camera", "Outdoor", "4K"],
+    "company": "CamPro",
+    "description": "Capture stunning 4K video with this durable action camera.",
+    "quantity": 15
+  },
+  {
+    "id": 12,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+12",
+    "name": "Noise Cancelling Earbuds",
+    "cost": "79.99",
+    "tags": ["Audio", "Wireless", "Earbuds"],
+    "company": "SilentTech",
+    "description": "Compact noise-cancelling earbuds with superior sound quality.",
+    "quantity": 80
+  },
+  {
+    "id": 13,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+13",
+    "name": "Smart Thermostat",
+    "cost": "129.99",
+    "tags": ["Home", "Smart", "Thermostat"],
+    "company": "HomeIQ",
+    "description": "Control your home's temperature remotely with this smart thermostat.",
+    "quantity": 45
+  },
+  {
+    "id": 14,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+14",
+    "name": "Electric Kettle",
+    "cost": "29.99",
+    "tags": ["Kitchen", "Electric", "Kettle"],
+    "company": "BrewMaster",
+    "description": "Fast-boiling electric kettle with automatic shut-off feature.",
+    "quantity": 120
+  },
+  {
+    "id": 15,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+15",
+    "name": "Fitness Tracker",
+    "cost": "59.99",
+    "tags": ["Wearables", "Fitness", "Electronics"],
+    "company": "FitTech",
+    "description": "Track your steps, heart rate, and calories burned.",
+    "quantity": 65
+  },
+  {
+    "id": 16,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+16",
+    "name": "Gaming Chair",
+    "cost": "149.99",
+    "tags": ["Furniture", "Gaming", "Ergonomic"],
+    "company": "Gamer's Lounge",
+    "description": "Ergonomic gaming chair with adjustable height and reclining back.",
+    "quantity": 10
+  },
+  {
+    "id": 17,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+17",
+    "name": "Smart Door Lock",
+    "cost": "179.99",
+    "tags": ["Home", "Security", "Smart"],
+    "company": "SecureHome",
+    "description": "Control your door lock from your phone with this smart lock.",
+    "quantity": 28
+  },
+  {
+    "id": 18,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+18",
+    "name": "Electric Toothbrush",
+    "cost": "19.99",
+    "tags": ["Health", "Personal Care", "Electric"],
+    "company": "BrightSmile",
+    "description": "Electric toothbrush with multiple brushing modes for optimal oral care.",
+    "quantity": 90
+  },
+  {
+    "id": 19,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+19",
+    "name": "Robot Vacuum",
+    "cost": "199.99",
+    "tags": ["Home", "Cleaning", "Robot"],
+    "company": "CleanBot",
+    "description": "Automated robot vacuum cleaner with scheduling and remote control.",
+    "quantity": 18
+  },
+  {
+    "id": 20,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+20",
+    "name": "Smart Light Bulb",
+    "cost": "15.99",
+    "tags": ["Home", "Smart", "Lighting"],
+    "company": "Lightify",
+    "description": "Change colors and dim lighting with this smart bulb controlled by your phone.",
+    "quantity": 200
+  },
+  {
+    "id": 21,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+21",
+    "name": "Streaming Microphone",
+    "cost": "49.99",
+    "tags": ["Audio", "Streaming", "Microphone"],
+    "company": "SoundPro",
+    "description": "High-quality streaming microphone with noise reduction.",
+    "quantity": 20
+  },
+  {
+    "id": 22,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+22",
+    "name": "Smart Scale",
+    "cost": "29.99",
+    "tags": ["Fitness", "Smart", "Scale"],
+    "company": "FitScale",
+    "description": "Track your weight, BMI, and body fat percentage with this smart scale."
+  },
+  {
+    "id": 23,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+23",
+    "name": "3D Printer",
+    "cost": "499.99",
+    "tags": ["Electronics", "DIY", "3D Printing"],
+    "company": "PrintMaster",
+    "description": "Create your own designs with this compact 3D printer."
+  },
+  {
+    "id": 22,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+22",
+    "name": "Smart Scale",
+    "cost": "29.99",
+    "tags": ["Fitness", "Smart", "Scale"],
+    "company": "FitScale",
+    "description": "Track your weight, BMI, and body fat percentage with this smart scale.",
+    "quantity": 60
+  },
+  {
+    "id": 23,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+23",
+    "name": "3D Printer",
+    "cost": "499.99",
+    "tags": ["Electronics", "DIY", "3D Printing"],
+    "company": "PrintMaster",
+    "description": "Create your own designs with this compact 3D printer.",
+    "quantity": 8
+  },
+  {
+    "id": 24,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+24",
+    "name": "Electric Scooter",
+    "cost": "299.99",
+    "tags": ["Transportation", "Electric", "Scooter"],
+    "company": "EcoRide",
+    "description": "Electric scooter for efficient city commuting with long battery life.",
+    "quantity": 12
+  },
+  {
+    "id": 25,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+25",
+    "name": "Pet Camera",
+    "cost": "79.99",
+    "tags": ["Home", "Pets", "Camera"],
+    "company": "PawsVision",
+    "description": "Monitor your pets with this 1080p HD camera with two-way audio.",
+    "quantity": 50
+  },
+  {
+    "id": 26,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+26",
+    "name": "Electric Grill",
+    "cost": "69.99",
+    "tags": ["Kitchen", "Cooking", "Electric"],
+    "company": "GrillMaster",
+    "description": "Indoor electric grill for healthy grilling all year round.",
+    "quantity": 40
+  },
+  {
+    "id": 27,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+27",
+    "name": "Smartphone Gimbal",
+    "cost": "129.99",
+    "tags": ["Photography", "Smartphone", "Gimbal"],
+    "company": "SmoothShot",
+    "description": "Stabilize your smartphone for ultra-smooth video footage with this gimbal.",
+    "quantity": 25
+  },
+  {
+    "id": 28,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+28",
+    "name": "Outdoor Projector",
+    "cost": "179.99",
+    "tags": ["Entertainment", "Outdoor", "Projector"],
+    "company": "CinemaGo",
+    "description": "Enjoy movies in the backyard with this portable outdoor projector.",
+    "quantity": 15
+  },
+  {
+    "id": 29,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+29",
+    "name": "Smart Water Bottle",
+    "cost": "49.99",
+    "tags": ["Fitness", "Smart", "Water Bottle"],
+    "company": "HydroSmart",
+    "description": "Track your water intake and stay hydrated with this smart water bottle.",
+    "quantity": 85
+  },
+  {
+    "id": 30,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+30",
+    "name": "Handheld Vacuum",
+    "cost": "39.99",
+    "tags": ["Home", "Cleaning", "Vacuum"],
+    "company": "CleanSweep",
+    "description": "Compact and powerful handheld vacuum for quick and easy cleaning.",
+    "quantity": 60
+  },
+  {
+    "id": 31,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+31",
+    "name": "Smart Fridge",
+    "cost": "1299.99",
+    "tags": ["Home", "Smart", "Fridge"],
+    "company": "FridgeTech",
+    "description": "A smart fridge that lets you control temperature and check contents remotely.",
+    "quantity": 5
+  },
+  {
+    "id": 32,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+32",
+    "name": "Smart Air Purifier",
+    "cost": "199.99",
+    "tags": ["Home", "Smart", "Air Purifier"],
+    "company": "PureAir",
+    "description": "Clean the air in your home with this smart air purifier with app control.",
+    "quantity": 30
+  },
+  {
+    "id": 33,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+33",
+    "name": "High-Speed Blender",
+    "cost": "129.99",
+    "tags": ["Kitchen", "Blender", "High-Speed"],
+    "company": "BlendMaster",
+    "description": "Blend smoothies, soups, and sauces with this powerful high-speed blender.",
+    "quantity": 70
+  },
+  {
+    "id": 34,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+34",
+    "name": "Solar Power Bank",
+    "cost": "39.99",
+    "tags": ["Accessories", "Portable", "Solar"],
+    "company": "SolarCharge",
+    "description": "Charge your devices with this solar-powered power bank.",
+    "quantity": 45
+  },
+  {
+    "id": 35,
+    "image": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+35",
+    "name": "Electric Bike",
+    "cost": "899.99",
+    "tags": ["Transportation", "Electric", "Bike"],
+    "company": "EcoPedal",
+    "description": "Eco-friendly electric bike with pedal assist and long-range battery.",
+    "quantity": 7
+  },
+  {
+    "id": 36,
+    "image": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+36",
+    "name": "Treadmill",
+    "cost": "499.99",
+    "tags": ["Fitness", "Exercise", "Treadmill"],
+    "company": "FitRunner",
+    "description": "Stay fit at home with this high-quality treadmill with adjustable speed.",
+    "quantity": 20
+  },
+  {
+    "id": 37,
+    "image": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+37",
+    "name": "Electric Paint Sprayer",
+    "cost": "129.99",
+    "tags": ["Home", "DIY", "Sprayer"],
+    "company": "SprayMaster",
+    "description": "Paint large areas quickly with this powerful electric paint sprayer.",
+    "quantity": 30
+  },
+  {
+    "id": 38,
+    "image": "https://via.placeholder.com/150/FF33A6/FFFFFF?text=Product+38",
+    "name": "Smart Speaker",
+    "cost": "89.99",
+    "tags": ["Audio", "Smart", "Speaker"],
+    "company": "EchoSound",
+    "description": "Control your smart home and play music with this voice-activated speaker.",
+    "quantity": 100
+  },
+  {
+    "id": 39,
+    "image": "https://via.placeholder.com/150/FFB833/FFFFFF?text=Product+39",
+    "name": "Photo Printer",
+    "cost": "99.99",
+    "tags": ["Photography", "Printer", "Portable"],
+    "company": "PrintSnap",
+    "description": "Print high-quality photos from your smartphone with this portable photo printer.",
+    "quantity": 15
+  },
+  {
+    "id": 40,
+    "image": "https://via.placeholder.com/150/33B5FF/FFFFFF?text=Product+40",
+    "name": "Smart Mirror",
+    "cost": "299.99",
+    "tags": ["Home", "Smart", "Mirror"],
+    "company": "ReflectIQ",
+    "description": "A smart mirror that displays weather, news, and fitness data.",
+    "quantity": 10
+  }
 ]
